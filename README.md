@@ -34,7 +34,7 @@ var callback = delegate(Classifier classifier)
   classifier.Classify(trainData[0]); // Use a new sample pattern here instead
 };
 
-ClassifierFactory.CreateGestureClassifier(config, trainData, targets, classifier => ...);
+ClassifierFactory.CreateGestureClassifier(config, trainData, targets, callback);
 ```
 In reality, you of course do not want to supply training data in such a way. Using my project as an example, I record relative positions of the user's hand over a short time, using a positive:negative pattern ratio of around 2:1.
 
