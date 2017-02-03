@@ -29,7 +29,7 @@ targets[0] = 1;
 
 // ...
 
-var callback = delegate(Classifier classifier)
+Action<Classifier> callback = delegate(Classifier classifier)
 {
   classifier.Classify(trainData[0]); // Use a new sample pattern here instead
 };
